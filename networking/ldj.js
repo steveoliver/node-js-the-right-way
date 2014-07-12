@@ -19,3 +19,9 @@ const
   };
 util.inherits(LDJClient, events.EventEmitter);
 
+// expose module methods
+exports.LDJClient = LDJclient;
+exports.connect = function(stream) {
+  return new LDJClient(stream);
+};
+
